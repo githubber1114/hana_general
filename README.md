@@ -6,7 +6,7 @@ hana_compare_config_params.py
   - for each parameter, script queries AUDIT_LOG to try to determine last changed date/by, assuming auditing is enabled for system configuration changes
   - compares results, ignoring server name and port
   - creates an Excel file with the results, and flags differences in a column called Match
-  - When executed, should see somethiing like the following output:
+  - When executed, should see somethiing like the following output on the terminal:
 
     4860 parameters returned from Production
     Validated 4860 parameters from Production
