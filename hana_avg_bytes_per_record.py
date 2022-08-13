@@ -26,7 +26,7 @@ for tbl in tblrows:
     sqlGetCols = """
                     SELECT COLUMN_NAME FROM M_CS_COLUMNS
                     WHERE TABLE_NAME = '""" + tbl[0] + """'
-                    AND SCHEMA_NAME = 'schema namr'
+                    AND SCHEMA_NAME = 'schema name'
                     AND PART_ID < 2
     """
     cursor.execute(sqlGetCols)
@@ -37,7 +37,7 @@ for tbl in tblrows:
     if limit > 0:
         for row in rows:
             sqlGetRows = '''
-                            SELECT top ''' + str(limit) + ''' LENGTH("''' + row[0] + '''") FROM ENT_SLT.''' + tbl[0]
+                            SELECT top ''' + str(limit) + ''' LENGTH("''' + row[0] + '''") FROM <schema name>.''' + tbl[0]
             cursor.execute(sqlGetRows)
             lens = cursor.fetchall()
             for leng in lens:
